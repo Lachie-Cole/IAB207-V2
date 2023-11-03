@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="..\..\static\styles.css">
+{% endblock %}
+
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block content %}
+
+  <div class="container" id="form-container">
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <h1>Add Concert Destination</h1>
+        <p>Enter an Artist that you will help clients attent.</p>
+        {{ render_form(form) }}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

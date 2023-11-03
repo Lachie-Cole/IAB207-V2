@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="..\..\static\styles.css">
+{% endblock %}
+
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row mt-5 mb-3">
+    <div class="col-md-12">
+      <div class="float-left">
+        <h1 class="mb-0">{{ event.name }}</h1>
+        <p>Popular Artist</p>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- Destination -->
+  <div class="card">
+    <img class="media-image" src="{{ event.image_path }}" alt="{{ event.name }}">
+    <div class="card-content">
+      <small class="font-weight-bold text-muted">Feel the rhythm, live the moment </small>
+      <h5>{{ event.name }}</h5>
+      <p>{{ event.description }}</p>
+      <a href="#" class="btn btn-danger">Book Now</a>
+    </div>
+  </div>
+
+
+  <hr>
+  <!-- Comments -->
+  <div class="row comments-section">
+    <div class="col-md-12">
+      <h2>Comments</h2>
+    </div>
+
+    <div class="row border-bottom">
+      {{ render_form(form, "/events/{0}/comment".format(event.id)) }}
+
+      {% for comment in event.comments %}
+      <div class="col-md-12 comment">
+        <span class="comment-user">{{ comment.user.name }}</span>
+        <span class="comment-date text-muted">{{ comment.created_at.strftime('%B %d, %Y, %I:%M %p') }}</span>
+        <p class="comment-text">{{ comment.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

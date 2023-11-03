@@ -1,0 +1,146 @@
+/* Reset some default styles for compatibility */
+body, h1, h2, p, ul, li, a, button, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #808080;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif; /* Define a font-family for the entire document */
+}
+
+nav {
+  background-color: #2d4b7d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+footer {
+  background-color: #333;
+  position: relative;
+  margin-top: auto;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* Add specific styling for input and button elements */
+
+input[type="text"], input[type="number"], select, textarea {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #2d4b7d;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Update other styles to match the HTML structure */
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.my-jumbotron {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  margin: 20px;
+  display: inline-block;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card h5 {
+  font-size: 24px;
+  color: #2d4b7d;
+}
+
+.card p {
+  font-size: 16px;
+  color: #808080;
+}
+
+/* Add specific styles for the search form */
+
+.form-inline {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#SearchForm {
+  flex-grow: 1;
+}
+
+/* Add specific styles for the footer links */
+
+.footer ul.list-unstyled {
+  list-style: none;
+}
+
+.footer a.link-dark {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a.link-dark:hover {
+  text-decoration: underline;
+}

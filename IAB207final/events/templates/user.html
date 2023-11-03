@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block styles %}
+<link rel="stylesheet" href="..\static\styles.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid" id="form-container">
+<div class="page-header text-center">
+    <h4>{{ heading }}</h4>
+</div>
+
+<!-- Form rendering is simple and easy if using bootstrap -->
+<div class="col-md-6 ml-5" id="form-wrapper">
+  {{ render_form(form) }}
+</div>
+
+{% endblock %}
